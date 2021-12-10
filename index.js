@@ -235,8 +235,8 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 function getArtistByIndex(array, number) {
   return `the artist at index ${number} is ${array}`;
 }
-console.log('task3', getArtistByIndex(artists, 0));
 
+console.log('task3', getArtistByIndex());
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -248,10 +248,16 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  const newArray = artists.split()
+  const newArray = [];
+  for (let i = 0; i < array.length; i++){
+    if (array[i].years.split(' - ') > '1900' && array[i].years.split(' - ') < '2000'){
+      newArray.push(array[i].name);
+    }
+  }
+  return newArray;
 }
 
-
+console.log('task4', get20s(artists)); 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -263,8 +269,8 @@ Use removeArtist to do the following:
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, number) {
-  delete artists[0];
-  return artists.length;
+  artists.pop();
+
 }
 
 console.log('task5', removeArtist(artists, 0));
@@ -308,10 +314,13 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array) {
-  const newArray = [];
-  if(array.paintings >= 100){
-    return newArray
+  const newArray2 = [];
+  for (let i = 0; i < array.length; i++){
+    if(array[i].paintings >= 100){
+      newArray2.push(array[i].name);
+    }
   }
+  return newArray2
 }
 
 console.log('task7', lotsOfArt(artists));
