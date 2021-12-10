@@ -215,7 +215,7 @@ console.log('task1', artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
 
-console.log('task2', artists[2].bio);
+console.log('task1b', artists[2].bio);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
@@ -236,7 +236,7 @@ function getArtistByIndex(array, number) {
   return `the artist at index ${number} is ${array}`;
 }
 
-console.log('task3', getArtistByIndex());
+console.log('task3', getArtistByIndex(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
