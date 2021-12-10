@@ -1,3 +1,5 @@
+const { loadPartialConfig } = require("@babel/core");
+
 const artists = [
   {
     "id": 0,
@@ -284,10 +286,19 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array) {
-  
+  artists.push({ 
+    id: 20,
+    name: 'Charles', 
+    years: 2001 - 2021,
+    genre: 'Web Design', 
+    nationality: 'American',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur auctor erat, in dictum velit consectetur nec. Duis at diam tempus, tincidunt velit sed, elementum lorem. Proin mattis consequat est. Nam at lorem et lorem vehicula varius. Aliquam eu leo eleifend.'
+  })
+  return array
 }
 
-console.log(addArtist(artists));
+console.log(addArtist('task6', artists));
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -296,10 +307,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const newArray = [];
+  if(array.paintings >= 100){
+    return newArray
+  }
 }
 
+console.log('task7', lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
