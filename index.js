@@ -233,6 +233,7 @@ Use getArtistByIndex to do the following:
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, number) {
+
   return `the artist at index ${number} is ${array}`;
 }
 
@@ -269,8 +270,8 @@ Use removeArtist to do the following:
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, number) {
-  artists.pop();
-
+  array.pop(artists, 0);
+  return array.length;
 }
 
 console.log('task5', removeArtist(artists, 0));
